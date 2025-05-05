@@ -24,7 +24,7 @@ export const authMiddleware = async (req, res, next) => {
         })
         .end();
     } else {
-      req.user = user;
+      req.user = user; // Memastikan request memiliki token yang valid.
       next();
     }
   }
