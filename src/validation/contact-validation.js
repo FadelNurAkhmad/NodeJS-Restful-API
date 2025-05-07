@@ -7,4 +7,8 @@ const createContactValidation = Joi.object({
   phone: Joi.string().max(20).optional(),
 });
 
-export { createContactValidation };
+const getContactValidation = Joi.number().positive().required();
+// Method .positive() pada Joi digunakan untuk memvalidasi bahwa nilai
+// angka (number) yang diberikan harus lebih besar dari 0 (alias positif).
+
+export { createContactValidation, getContactValidation };
